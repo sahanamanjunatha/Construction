@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Projects | BuildCraft Constructions</title>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon-box">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                </div>
+                <div class="logo-text-box">
+                    <span class="logo-title">BUILDCRAFT</span>
+                    <span class="logo-tagline">CONSTRUCTIONS</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link">About Us <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">Company Overview</a></li>
+                            <li><a href="about.html#values">Our Values</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="services.html" class="nav-link">Construction Services <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html#commercial">Commercial Construction</a></li>
+                            <li><a href="services.html#residential">Residential Construction</a></li>
+                            <li><a href="services.html#renovation">Renovation & Remodeling</a></li>
+                            <li><a href="services.html#roofing">Roofing Solutions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="projects.html" class="nav-link active">Past Projects <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projects.html">Featured Portfolio</a></li>
+                            <li><a href="projects.html#commercial-projects">Commercial Hubs</a></li>
+                            <li><a href="projects.html#residential-villas">Luxury Villas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <button class="btn btn-orange open-quote-btn">
+                    Get a Quote <i class="fa-solid fa-arrow-right btn-arrow"></i>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Banner (300px height) -->
+    <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85');">
+        <div class="page-banner-overlay"></div>
+        <div class="container banner-content">
+            <h1 class="banner-title">Our Past Work</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">→</span>
+                <span>Our Past Work</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Projects Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center" style="max-width: 750px; margin: 0 auto 50px auto;">
+                <span class="section-label">Our Past Projects</span>
+                <h2 class="section-title">Featured Previous Projects</h2>
+                <p>
+                    Browse through our portfolio of landmark commercial towers, luxury custom villas, retail centers, and industrial facilities constructed across North America and India.
+                </p>
+            </div>
+
+            <!-- 3-Column Image Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" id="commercial-projects">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=85" alt="Commercial Office">
+                    <div class="project-card-overlay">
+                        <span class="project-category">Commercial</span>
+                        <h3 class="project-title">Commercial Office Hub</h3>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" id="residential-villas">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85" alt="Residential Villa">
+                    <div class="project-card-overlay">
+                        <span class="project-category">Residential</span>
+                        <h3 class="project-title">Residential Villa</h3>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=85" alt="Retail Renovation">
+                    <div class="project-card-overlay">
+                        <span class="project-category">Renovation</span>
+                        <h3 class="project-title">Retail Renovation</h3>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=85" alt="Corporate Building">
+                    <div class="project-card-overlay">
+                        <span class="project-category">Commercial</span>
+                        <h3 class="project-title">Corporate Building</h3>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=85" alt="Modern Home">
+                    <div class="project-card-overlay">
+                        <span class="project-category">Residential</span>
+                        <h3 class="project-title">Modern Home</h3>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=85" alt="Commercial Renovation">
+                    <div class="project-card-overlay">
+                        <span class="project-category">Renovation</span>
+                        <h3 class="project-title">Commercial Renovation</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo" style="margin-bottom: 16px;">
+                        <div class="logo-icon-box" style="background-color: var(--orange-primary); color: var(--white);">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <div class="logo-text-box">
+                            <span class="logo-title" style="color: var(--white);">BUILDCRAFT</span>
+                            <span class="logo-tagline" style="color: var(--orange-primary);">CONSTRUCTIONS</span>
+                        </div>
+                    </a>
+                    <p>
+                        BuildCraft Constructions is your trusted general contractor for commercial, residential, and infrastructure building projects. High quality, on-time, and on-budget.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="projects.html">Our Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Commercial Construction</a></li>
+                        <li><a href="services.html">Residential Construction</a></li>
+                        <li><a href="services.html">Renovation & Remodeling</a></li>
+                        <li><a href="services.html">Roofing Solutions</a></li>
+                        <li><a href="services.html">Project Management</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210 / +1 (800) 555-BUILD</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@buildcraftconstructions.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Coimbatore, Tamil Nadu, India</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 BuildCraft Constructions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Get a Quote Modal -->
+    <div class="modal-overlay" id="quoteModal">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="closeQuoteModal" aria-label="Close modal">&times;</button>
+            <h3 class="modal-title">Get a Free Quote</h3>
+            <p class="modal-subtitle">Submit your project parameters and our team will get back to you within 24 hours.</p>
+            
+            <form id="quoteModalForm">
+                <div class="form-group">
+                    <label for="quoteName">Full Name *</label>
+                    <input type="text" id="quoteName" class="form-control" placeholder="John Doe" required>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label for="quoteEmail">Email Address *</label>
+                        <input type="email" id="quoteEmail" class="form-control" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quotePhone">Phone Number *</label>
+                        <input type="tel" id="quotePhone" class="form-control" placeholder="+91 98765 43210" required>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label for="quoteType">Project Type *</label>
+                        <select id="quoteType" class="form-control" required>
+                            <option value="" disabled selected>Select project type</option>
+                            <option value="Commercial">Commercial Construction</option>
+                            <option value="Residential">Residential Build</option>
+                            <option value="Renovation">Renovation / Remodel</option>
+                            <option value="Roofing">Roofing Solution</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quoteLocation">Project Location *</label>
+                        <input type="text" id="quoteLocation" class="form-control" placeholder="City, State" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="quoteBudget">Estimated Budget</label>
+                    <select id="quoteBudget" class="form-control">
+                        <option value="$100k - $500k">$100,000 – $500,000</option>
+                        <option value="$500k - $2M">$500,000 – $2,000,000</option>
+                        <option value="$2M - $10M">$2,000,000 – $10,000,000</option>
+                        <option value="$10M+">$10,000,000+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quoteDetails">Project Details *</label>
+                    <textarea id="quoteDetails" class="form-control" rows="4" placeholder="Briefly describe your requirements..." required></textarea>
+                </div>
+
+                <div class="form-alert" id="quoteAlert"></div>
+
+                <button type="submit" class="btn btn-orange" style="width: 100%; margin-top: 10px;">
+                    Submit Request <i class="fa-solid fa-arrow-right btn-arrow"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

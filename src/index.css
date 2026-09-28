@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom architectural SVG background overlay styling */
+.arch-grid-pattern {
+  background-image: 
+    radial-gradient(rgba(255, 90, 22, 0.15) 1px, transparent 0),
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px, 40px 40px, 40px 40px;
+}
+
+.arch-line-light {
+  background-image: 
+    linear-gradient(to right, rgba(16, 23, 53, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 23, 53, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
