@@ -32,10 +32,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenQ
           </div>
           <div className="flex flex-col">
             <span className="font-poppins font-extrabold text-xl text-navy-dark leading-none tracking-wide">
-              YOUR COMPANY
+              I20 Treat
             </span>
             <span className="font-poppins font-bold text-[10px] text-orange-primary tracking-[2.5px] mt-1">
-              CONSTRUCTIONS
+              epooo Sarvana
             </span>
           </div>
         </button>

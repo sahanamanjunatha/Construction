@@ -40,6 +40,7 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onNavigateHome, onOp
               title="Preconstruction"
               description="Comprehensive preconstruction planning, estimating, feasibility analysis, zoning approvals, and structural blueprinting."
               icon={<ClipboardList className="w-6 h-6" />}
+              bgImage="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=85"
               delay={0}
               onSelect={onOpenQuoteModal}
             />
@@ -49,8 +50,7 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onNavigateHome, onOp
               title="Roofing Services"
               description="Commercial and residential roofing solutions, storm damage repairs, membrane installations, and roof maintenance."
               icon={<Home className="w-6 h-6" />}
-              isHighlighted={true}
-              bgImage="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=85"
+              bgImage="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=85"
               delay={0.1}
               onSelect={onOpenQuoteModal}
             />
@@ -60,6 +60,7 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onNavigateHome, onOp
               title="BIM / Design Build"
               description="Streamlined design-build delivery integrating 3D Building Information Modeling with single-source project execution."
               icon={<Compass className="w-6 h-6" />}
+              bgImage="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=85"
               delay={0.2}
               onSelect={onOpenQuoteModal}
             />
@@ -69,6 +70,7 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onNavigateHome, onOp
               title="Sustainability"
               description="Eco-friendly building practices, energy-efficient design, sustainable materials, and green construction techniques."
               icon={<Leaf className="w-6 h-6" />}
+              bgImage="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=85"
               delay={0.3}
               onSelect={onOpenQuoteModal}
             />
@@ -78,6 +80,7 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onNavigateHome, onOp
               title="Construction"
               description="Turnkey general contracting for commercial buildouts, retail spaces, facility maintenance, and residential builds."
               icon={<Building2 className="w-6 h-6" />}
+              bgImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=85"
               delay={0.4}
               onSelect={onOpenQuoteModal}
             />
@@ -87,6 +90,7 @@ export const ServicesView: React.FC<ServicesViewProps> = ({ onNavigateHome, onOp
               title="Post Construction"
               description="Facility commissioning, final inspections, punch-list fulfillment, long-term building upkeep, and warranty care."
               icon={<ShieldCheck className="w-6 h-6" />}
+              bgImage="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85"
               delay={0.5}
               onSelect={onOpenQuoteModal}
             />

@@ -45,10 +45,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateHome, onNavigateAbout 
               </div>
               <div className="flex flex-col">
                 <span className="font-poppins font-extrabold text-lg text-white leading-none">
-                  YOUR COMPANY
+                  I20 Treat
                 </span>
                 <span className="font-poppins font-bold text-[9px] text-orange-primary tracking-[2px] mt-1">
-                  CONSTRUCTIONS
+                  epooo Sarvana
                 </span>
               </div>
             </div>

@@ -54,10 +54,10 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div className="flex flex-col">
                 <span className="font-poppins font-extrabold text-lg text-white leading-none">
-                  NIA CONSTRUCTION
+                  I20 Treat
                 </span>
                 <span className="font-poppins font-bold text-[9px] text-orange-primary tracking-[2px] mt-1">
-                  CHARLOTTE, NORTH CAROLINA
+                  epooo Sarvana
                 </span>
               </div>
             </div>

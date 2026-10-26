@@ -1,14 +1,14 @@
 import React from 'react';
-import { ClipboardList, Home, Compass, Leaf, Building2, ShieldCheck, ArrowRight } from 'lucide-react';
+import { ClipboardList, Home, Compass, Leaf, Building2, ShieldCheck } from 'lucide-react';
 import { ArchitecturalLines } from './ArchitecturalLines';
+import { ServiceCard } from '../design-system/ServiceCard';
 
 interface ServiceItem {
   number: string;
   title: string;
   description: string;
   icon: React.ReactNode;
-  isHighlighted?: boolean;
-  bgImage?: string;
+  bgImage: string;
 }
 
 const servicesList: ServiceItem[] = [
@@ -16,39 +16,43 @@ const servicesList: ServiceItem[] = [
     number: '01',
     title: 'Preconstruction',
     description: 'Comprehensive preconstruction planning, estimating, feasibility analysis, zoning approvals, and structural blueprinting.',
-    icon: <ClipboardList className="w-6 h-6" />
+    icon: <ClipboardList className="w-6 h-6" />,
+    bgImage: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=85'
   },
   {
     number: '02',
     title: 'Roofing Services',
     description: 'Commercial and residential roofing solutions, storm damage repairs, membrane installations, and roof maintenance.',
     icon: <Home className="w-6 h-6" />,
-    isHighlighted: true,
-    bgImage: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=85'
+    bgImage: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=85'
   },
   {
     number: '03',
     title: 'BIM / Design Build',
     description: 'Streamlined design-build delivery integrating 3D Building Information Modeling with single-source project execution.',
-    icon: <Compass className="w-6 h-6" />
+    icon: <Compass className="w-6 h-6" />,
+    bgImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=85'
   },
   {
     number: '04',
     title: 'Sustainability',
     description: 'Eco-friendly building practices, energy-efficient design, sustainable materials, and green construction techniques.',
-    icon: <Leaf className="w-6 h-6" />
+    icon: <Leaf className="w-6 h-6" />,
+    bgImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=85'
   },
   {
     number: '05',
     title: 'Construction',
     description: 'Turnkey general contracting for commercial buildouts, retail spaces, facility maintenance, and residential builds.',
-    icon: <Building2 className="w-6 h-6" />
+    icon: <Building2 className="w-6 h-6" />,
+    bgImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=85'
   },
   {
     number: '06',
     title: 'Post Construction',
     description: 'Facility commissioning, final inspections, punch-list fulfillment, long-term building upkeep, and warranty care.',
-    icon: <ShieldCheck className="w-6 h-6" />
+    icon: <ShieldCheck className="w-6 h-6" />,
+    bgImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85'
   }
 ];
 
@@ -71,86 +75,21 @@ export const FeaturedServices: React.FC = () => {
 
         {/* 6 Grid Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesList.map((service, index) => {
-            if (service.isHighlighted) {
-              /* HIGHLIGHTED ORANGE IMAGE CARD (Card 02 Roofing) */
-              return (
-                <div
-                  key={index}
-                  className="relative rounded-xl overflow-hidden shadow-xl min-h-[340px] flex flex-col justify-between p-8 group hover:-translate-y-1.5 transition-all duration-300"
-                >
-                  <img
-                    src={service.bgImage}
-                    alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-orange-primary/90 transition-opacity"></div>
-
-                  <div className="relative z-10 flex items-start justify-between">
-                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center">
-                      {service.icon}
-                    </div>
-                    <span className="font-poppins font-black text-5xl text-white/30">
-                      {service.number}
-                    </span>
-                  </div>
-
-                  <div className="relative z-10">
-                    <h3 className="font-poppins font-bold text-2xl text-white mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="font-poppins text-white/90 text-sm leading-relaxed mb-6">
-                      {service.description}
-                    </p>
-                    <a
-                      href="#footer"
-                      className="inline-flex items-center gap-2 font-poppins font-bold text-sm text-white group-hover:translate-x-1 transition-transform"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              );
-            }
-
-            /* STANDARD WHITE CARD */
-            return (
-              <div
-                key={index}
-                className="relative bg-white rounded-xl p-8 shadow-card border border-gray-100 flex flex-col justify-between min-h-[340px] hover:border-orange-primary hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 group"
-              >
-                <div>
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-full bg-orange-primary text-white flex items-center justify-center shadow-orange">
-                      {service.icon}
-                    </div>
-                    <span className="font-poppins font-black text-5xl text-gray-100 group-hover:text-orange-primary/20 transition-colors">
-                      {service.number}
-                    </span>
-                  </div>
-
-                  <h3 className="font-poppins font-bold text-xl text-navy-dark mb-3 group-hover:text-orange-primary transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="font-poppins text-textLight text-sm leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="font-poppins font-semibold text-xs text-navy-dark uppercase tracking-wider">
-                    Full Service
-                  </span>
-                  <div className="w-9 h-9 rounded-full bg-bgLight text-orange-primary group-hover:bg-orange-primary group-hover:text-white transition-colors duration-300 flex items-center justify-center">
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {servicesList.map((service, index) => (
+            <ServiceCard
+              key={index}
+              number={service.number}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              bgImage={service.bgImage}
+              delay={index * 0.1}
+            />
+          ))}
         </div>
 
       </div>
     </section>
   );
 };
+

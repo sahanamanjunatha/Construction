@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 
 interface HeroSlide {
   subtitle: string;
@@ -8,6 +8,7 @@ interface HeroSlide {
   ctaText: string;
   ctaLink: string;
   image: string;
+  watermark: string;
 }
 
 const heroSlides: HeroSlide[] = [
@@ -17,15 +18,17 @@ const heroSlides: HeroSlide[] = [
     description: 'NIA Construction is an African-American owned, general contractor and facility maintenance company. Thanks to 20+ years in business and counting, our staff brings over 200 years of combined experienced to this field. Your priorities are our priority.',
     ctaText: 'Learn More',
     ctaLink: '#about',
-    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1600&q=85'
+    image: '/images/roofing_worker_hero.jpg',
+    watermark: 'Roofing Services'
   },
   {
     subtitle: 'NIA Construction',
-    title: 'Over 20 Years of Experience',
-    description: 'With over 20 years of combined experience in both the real estate and construction industries, the NIA team consists of highly-trained experts with backgrounds ranging from real estate development and mortgage lending to engineering and general contracting.',
-    ctaText: 'Learn More',
+    title: 'Over 20 Years of Commercial Excellence',
+    description: 'With over 20 years of combined experience in both real estate development and construction management, our team delivers high-performance facilities, multi-family units, and custom commercial renovations.',
+    ctaText: 'Explore Projects',
     ctaLink: '#projects',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85'
+    image: '/images/commercial_building_hero.jpg',
+    watermark: 'General Contracting'
   }
 ];
 
@@ -35,7 +38,7 @@ export const Hero: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
+    }, 7000);
     return () => clearInterval(timer);
   }, []);
 
@@ -50,76 +53,124 @@ export const Hero: React.FC = () => {
   const activeSlide = heroSlides[currentSlide];
 
   return (
-    <section id="home" className="relative w-full min-h-[calc(100vh-85px)] bg-bgLight overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-85px)]">
-        
-        {/* LEFT: Overlapping Dark Navy Rounded Panel */}
-        <div className="lg:col-span-5 bg-navy-dark rounded-none lg:rounded-hero-panel p-8 sm:p-14 lg:p-20 flex flex-col justify-center relative z-20 shadow-hero arch-grid-pattern">
+    <section id="home" className="relative w-full min-h-[calc(100vh-90px)] bg-[#FAF8F5] overflow-hidden flex flex-col justify-stretch">
+      
+      {/* Background Yellow/Golden Sun Radial & Architectural Skyline Lines Overlay */}
+      <div className="absolute top-0 right-0 w-full lg:w-[70%] h-full pointer-events-none overflow-hidden z-0">
+        {/* Yellow Sun Glow */}
+        <div className="absolute top-[-10%] right-[15%] w-[650px] h-[650px] bg-amber-400/25 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-[20%] right-[25%] w-[450px] h-[450px] bg-yellow-300/30 rounded-full blur-2xl pointer-events-none"></div>
+
+        {/* Architectural Wireframe Grid Graphic */}
+        <svg className="absolute top-6 right-6 w-full h-full text-amber-500/15" viewBox="0 0 900 650" fill="none" stroke="currentColor" strokeWidth="1.2">
+          {/* Building 1 */}
+          <rect x="450" y="80" width="150" height="480" />
+          <line x1="450" y1="140" x2="600" y2="140" />
+          <line x1="450" y1="200" x2="600" y2="200" />
+          <line x1="450" y1="260" x2="600" y2="260" />
+          <line x1="450" y1="320" x2="600" y2="320" />
+          <line x1="450" y1="380" x2="600" y2="380" />
+          <line x1="500" y1="80" x2="500" y2="560" />
+          <line x1="550" y1="80" x2="550" y2="560" />
+
+          {/* Building 2 */}
+          <rect x="620" y="160" width="170" height="400" />
+          <line x1="620" y1="220" x2="790" y2="220" />
+          <line x1="620" y1="280" x2="790" y2="280" />
+          <line x1="620" y1="340" x2="790" y2="340" />
+          <line x1="675" y1="160" x2="675" y2="560" />
+          <line x1="730" y1="160" x2="730" y2="560" />
+
+          {/* Sun Circle Line Art */}
+          <circle cx="400" cy="220" r="160" strokeWidth="1.5" strokeDasharray="5 5" />
+          <circle cx="400" cy="220" r="195" strokeWidth="0.8" />
+        </svg>
+      </div>
+
+      <div className="w-full h-full flex-1 relative z-10 flex flex-col p-2 lg:p-4 lg:pt-3">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[calc(100vh-110px)] w-full gap-0 overflow-hidden rounded-tl-[40px] lg:rounded-tl-[65px] lg:rounded-br-3xl">
           
-          <div className="inline-flex items-center gap-2 bg-orange-primary/20 text-orange-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 w-fit">
-            <span>Servicing Charlotte, NC and the entire Southeast</span>
-          </div>
-
-          <span className="font-poppins font-bold text-xs sm:text-sm text-orange-primary uppercase tracking-[2.5px] mb-2 inline-block">
-            {activeSlide.subtitle}
-          </span>
-
-          <h1 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.15] mb-6">
-            {activeSlide.title}
-          </h1>
-
-          <p className="font-poppins text-base text-gray-300 leading-relaxed mb-8 max-w-lg">
-            {activeSlide.description}
-          </p>
-
-          <div>
-            <a
-              href={activeSlide.ctaLink}
-              className="inline-flex items-center gap-2 font-poppins font-semibold text-sm px-7 py-4 bg-orange-primary text-white rounded-md shadow-orange hover:bg-orange-hover hover:-translate-y-0.5 transition-all duration-300 group"
-            >
-              {activeSlide.ctaText} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
-        </div>
-
-        {/* RIGHT: Construction Worker / Site Image Slider */}
-        <div className="lg:col-span-7 relative min-h-[400px] lg:min-h-full overflow-hidden">
-          {heroSlides.map((slide, idx) => (
-            <div
-              key={idx}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-              }`}
-            >
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="w-full h-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-navy-dark/10"></div>
+          {/* LEFT: Dark Navy Rounded Panel */}
+          <div className="lg:col-span-5 bg-[#0C1427] rounded-tl-[40px] lg:rounded-tl-[65px] lg:rounded-tr-[140px] p-8 sm:p-14 lg:py-20 lg:px-16 xl:px-20 flex flex-col justify-center relative z-20 shadow-2xl overflow-hidden">
+            
+            {/* Far Left Vertical Watermark Text */}
+            <div className="absolute left-[-45px] top-1/2 -translate-y-1/2 hidden sm:block pointer-events-none select-none opacity-[0.11]">
+              <span className="font-poppins font-black text-7xl lg:text-8xl text-white uppercase tracking-[16px] [writing-mode:vertical-rl] rotate-180 block whitespace-nowrap">
+                {activeSlide.watermark}
+              </span>
             </div>
-          ))}
 
-          {/* Slider Control Box at Bottom-Right */}
-          <div className="absolute bottom-0 right-0 bg-navy-dark z-30 flex items-center rounded-tl-xl overflow-hidden shadow-2xl">
-            <button
-              onClick={handlePrev}
-              className="w-16 h-16 sm:w-20 sm:h-20 bg-transparent text-white hover:bg-orange-primary hover:text-white transition-colors duration-200 flex items-center justify-center border-r border-white/10 cursor-pointer"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="w-7 h-7 sm:w-8 sm:h-8" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="w-16 h-16 sm:w-20 sm:h-20 bg-transparent text-white hover:bg-orange-primary hover:text-white transition-colors duration-200 flex items-center justify-center cursor-pointer"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="w-7 h-7 sm:w-8 sm:h-8" />
-            </button>
+            {/* Content Container */}
+            <div className="relative z-10 pl-0 sm:pl-8 lg:pl-6 max-w-xl">
+              <span className="font-poppins font-bold text-base sm:text-lg text-[#FA5A1E] tracking-widest mb-3 block uppercase">
+                {activeSlide.subtitle}
+              </span>
+
+              {/* Main Headline */}
+              <h1 className="font-poppins font-extrabold text-4xl sm:text-5xl lg:text-[54px] xl:text-[62px] text-white leading-[1.12] mb-6 tracking-tight">
+                {activeSlide.title}
+              </h1>
+
+              {/* Body Text */}
+              <p className="font-poppins text-slate-300 text-base sm:text-lg leading-relaxed mb-10 font-normal">
+                {activeSlide.description}
+              </p>
+
+              {/* Action Button - Extra Large & Prominent */}
+              <div>
+                <a
+                  href={activeSlide.ctaLink}
+                  className="inline-flex items-center gap-4 font-poppins font-extrabold text-xl px-11 py-5 bg-[#FA5A1E] text-white rounded-lg shadow-2xl hover:bg-[#E04808] hover:scale-105 active:scale-95 transition-all duration-300 group cursor-pointer tracking-wide"
+                >
+                  {activeSlide.ctaText} <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
+                </a>
+              </div>
+            </div>
+
           </div>
-        </div>
 
+          {/* RIGHT: High Quality Silhouetted Worker Hero Photo & Carousel */}
+          <div className="lg:col-span-7 relative min-h-[450px] lg:min-h-full overflow-hidden bg-slate-900">
+            {heroSlides.map((slide, idx) => (
+              <div
+                key={idx}
+                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                  idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                }`}
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-full object-cover object-center"
+                />
+                {/* Soft gradient shadow overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0C1427]/40 via-transparent to-black/20"></div>
+              </div>
+            ))}
+
+            {/* Bottom-Right Dark Navy Carousel Navigation Controls */}
+            <div className="absolute bottom-0 right-0 bg-[#0C1427] z-30 flex items-center shadow-2xl rounded-tl-2xl border-t border-l border-white/10 overflow-hidden">
+              <button
+                onClick={handlePrev}
+                className="w-18 h-18 sm:w-24 sm:h-24 bg-transparent text-white hover:bg-[#FA5A1E] transition-colors duration-200 flex items-center justify-center border-r border-white/10 cursor-pointer"
+                aria-label="Previous slide"
+              >
+                <ArrowLeft className="w-8 h-8 sm:w-9 sm:h-9" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="w-18 h-18 sm:w-24 sm:h-24 bg-transparent text-white hover:bg-[#FA5A1E] transition-colors duration-200 flex items-center justify-center cursor-pointer"
+                aria-label="Next slide"
+              >
+                <ArrowRight className="w-8 h-8 sm:w-9 sm:h-9" />
+              </button>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );
 };
+
